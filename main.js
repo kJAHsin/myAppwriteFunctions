@@ -12,9 +12,9 @@ export default async ({ req, res, log, error }) => {
 	const db = new Databases(client);
 
 	if (req.method == "get") {
-		const res = await db.listDocuments(DB_ID, COLLECTION_ID_PROFILES);
+		const result = await db.listDocuments(DB_ID, COLLECTION_ID_PROFILES);
 
-		log(res);
+		return res.send(result);
 	}
 
 	return res.send(PROJECT_ID);
