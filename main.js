@@ -7,5 +7,5 @@ export default async ({ req, res, log, error }) => {
 
 	client.setEndpoint("https://cloud.appwrite.io/v1").setProject(PROJECT_ID);
 
-	return res.send("Hey fuckers!");
+	return res.send(PROJECT_ID);
 };
